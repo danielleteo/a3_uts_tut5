@@ -15,4 +15,4 @@ The website was built with HTML, and embellished with CSS and JavaScript.
 To run this project, replicate all files and open The Void.html in an internet browser.
 
 # Status
-The project's overall state is still in development.
+The project's overall state is still in development but functional.
