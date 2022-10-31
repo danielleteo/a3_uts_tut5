@@ -1,4 +1,4 @@
-# The Void
+# Interactive Fiction: The Void
 
 ## Table of Contents
 * [Introduction](#introduction)
