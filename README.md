@@ -12,7 +12,7 @@ The project, 'The Void', is a text-based narrative game hosted on the web. It ai
 The website was built with HTML, and embellished with CSS and JavaScript. 
 
 # Launch
-To run this project, download the files and open The Void.html in an internet browser.
+To run this project, replicate all files and open The Void.html in an internet browser.
 
 # Status
 The project's overall state is still in development.
