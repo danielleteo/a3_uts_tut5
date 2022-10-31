@@ -10,8 +10,10 @@ h1 {
 	font-style: oblique;
 	font-weight: light;
 	letter-spacing: 4px;
+	word-spacing: 2px;
 	padding-bottom: 8px;
 	font-size: 28px;
+	text-align: center;
 }
 
 p {
@@ -62,7 +64,7 @@ img {
 	margin-right: auto;
 	width: 100%;
 	padding-bottom: 20px;
-	opacity: 0.8;
+	opacity: 0.5;
 	transition: 0.5s ease;
 }
 
@@ -91,9 +93,23 @@ img:hover {
 }
 
 
-/*Fade-In Text*/
+.charactercard:hover .characterinfo {
+	display: unset;
+}
 
-.fadeintext {
+.characterinfo {
+  color: #cccccc;
+  font-size: 14px;
+  padding: 25px;
+  font-family: arial;
+  letter-spacing: 1.5px;
+  display: none;
+}
+
+
+/*Fade-In Effect*/
+
+.fadein {
 	animation: fadeIn 5s;
 }
 
@@ -167,12 +183,13 @@ img:hover {
 	text-align: center;
 	padding: 20px;
 	text-decoration: none;
-	width: 25%;
+	width: 20%;
 }
 
 .bottomnavbar a:hover {
 	font-weight: bold;
 	letter-spacing: 3px;
+	cursor: pointer;
 }
 	
 .bottomnavbar a.active {
@@ -180,6 +197,7 @@ img:hover {
 	font-weight: bold;
 	border-top: 1px solid white;
 }
+
 
 
 /*Sidebar CSS*/
@@ -241,3 +259,4 @@ img:hover {
   transition: margin-left .5s;
   padding: 12px;
 }
+

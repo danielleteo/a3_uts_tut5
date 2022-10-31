@@ -12,28 +12,36 @@ function closeNav() {
 
 //Typewriter JS
 
-function showTheVoidDoesNotForget() { 
-    document.getElementById("TheVoidDoesNotForget").style.display = "inline"; 
+function showChapterSubtitle() { 
+    document.getElementById("ChapterSubtitle").style.display = "inline"; 
 }
 
 var i = 0;
-var txt = 'but The Void does not forget.';
+var txt = 'writing on the wall';
 var speed = 200;
 
 function typeWriter() {
   if (i < txt.length) {
-    document.getElementById("thevoiddoesnotforget").innerHTML += txt.charAt(i);
+    document.getElementById("chaptersubtitle").innerHTML += txt.charAt(i);
     i++;
     setTimeout(typeWriter, speed);
   }
+
+setTimeout("showStartChapter()", 4000);
 }
 
 
 
-//NoMemory
-function showNoMemory (){
-	document.getElementById("NoMemory").style.display = "inline";
+//Chapter Title
+function showChapterTitle (){
+	document.getElementById("ChapterTitle").style.display = "inline";
 	setTimeout("typeWriter()", 2000); 
+}
+
+
+//Show Begin Button JS
+function showStartChapter() { 
+    document.getElementById("StartChapter").style.display = "inline"; 
 }
 
 
@@ -42,9 +50,9 @@ function showNextButton() {
 	document.getElementById("NextButton").style.display = "inline";
 }
 
-setTimeout("showNextButton()", 7500);
+setTimeout("showNextButton()", 5000);
 
-
+	
 //Save Game
 var savedgame = "Prologue Intro.html";
 

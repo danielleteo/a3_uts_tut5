@@ -54,4 +54,20 @@ function showNextButton() {
 setTimeout("showNextButton()", 5000);
 
 	
+//Save Game
+var savedgame = "Prologue Intro.html";
 
+function saveGame() {
+  document.getElementById("savegame").innerHTML = "saved"
+  document.getElementById("savegame").style.color = "red";
+}
+
+
+//Load Game
+function loadGame() {
+  if (confirm("Load game?")) {
+  location.href = savedgame;  
+  } else {
+    document.getElementById("loadgame").innerHTML = "load";
+  }
+}

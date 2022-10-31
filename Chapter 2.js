@@ -54,8 +54,39 @@ function showNextButton() {
 setTimeout("showNextButton()", 5000);
 
 
+//Show but the Void does not forget
+function showTheVoidDoesNotForget() {
+	document.getElementById("TheVoidDoesNotForget").style.display = "inline";
+}
+
+setTimeout("showTheVoidDoesNotForget()", 5000);
+
+
+
+//Set Voidability
+//const initialVoidability = 0;
+
+//function increaseVoidability (){
+	//if currentVoidability = 0 {
+	//const changeinVoidability = 2;
+	//let currentVoidability = initialVoidability + changeinVoidability;
+	//} else {
+	//let currentVoidability = priorVoidability + changeinVoidability;
+	//}
+//}
+
+//function decreaseVoidability(){
+	//if currentVoidability = 0 {
+	//const changeinVoidability = 0;
+	//} else {
+	//const changeinVoidability = -2;
+	//let currentVoidability = priorVoidability + changeinVoidability;
+	//}
+//}
+	
+
 //Save Game
-var savedgame = "The Void.html";
+var savedgame = "Prologue Intro.html";
 
 function saveGame() {
   document.getElementById("savegame").innerHTML = "saved"
@@ -71,4 +102,3 @@ function loadGame() {
     document.getElementById("loadgame").innerHTML = "load";
   }
 }
-

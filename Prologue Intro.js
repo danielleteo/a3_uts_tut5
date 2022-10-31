@@ -12,28 +12,37 @@ function closeNav() {
 
 //Typewriter JS
 
-function showTheVoidDoesNotForget() { 
-    document.getElementById("TheVoidDoesNotForget").style.display = "inline"; 
+function showPrologueTitle() { 
+    document.getElementById("PrologueTitle").style.display = "inline"; 
 }
 
 var i = 0;
-var txt = 'but The Void does not forget.';
+var txt = 'bodies heartbeats neon flashes';
 var speed = 200;
 
 function typeWriter() {
   if (i < txt.length) {
-    document.getElementById("thevoiddoesnotforget").innerHTML += txt.charAt(i);
+    document.getElementById("prologuetitle").innerHTML += txt.charAt(i);
     i++;
     setTimeout(typeWriter, speed);
   }
+
+setTimeout("showStartPrologue()", 6000);
 }
 
 
 
-//NoMemory
-function showNoMemory (){
-	document.getElementById("NoMemory").style.display = "inline";
+//Prologue Header
+function showPrologueHeader (){
+	document.getElementById("PrologueHeader").style.display = "inline";
 	setTimeout("typeWriter()", 2000); 
+}
+
+
+//Show Begin Button JS
+function showStartPrologue() { 
+    document.getElementById("StartPrologue").style.display = "inline"; 
+
 }
 
 
@@ -42,23 +51,24 @@ function showNextButton() {
 	document.getElementById("NextButton").style.display = "inline";
 }
 
-setTimeout("showNextButton()", 7500);
+setTimeout("showNextButton()", 5000);
 
 
 //Save Game
-var savedgame = "Prologue Intro.html";
 
 function saveGame() {
   document.getElementById("savegame").innerHTML = "saved"
   document.getElementById("savegame").style.color = "red";
+  var savedgame = $(location).attr("href");
 }
 
 
 //Load Game
 function loadGame() {
   if (confirm("Load game?")) {
-  location.href = savedgame;  
+  $("#loadgame").load("savedgame");  
   } else {
     document.getElementById("loadgame").innerHTML = "load";
   }
 }
+

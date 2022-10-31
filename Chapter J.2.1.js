@@ -63,10 +63,26 @@ setTimeout("showTheVoidDoesNotForget()", 5000);
 
 
 
-//No Memory
-//function showNoMemory (){
-	document.getElementById("NoMemory").style.display = "inline";
-	setTimeout("TheVoidDoesNotForget()", 2000); 	
+//Set Voidability
+//const initialVoidability = 0;
+
+//function increaseVoidability (){
+	//if currentVoidability = 0 {
+	//const changeinVoidability = 2;
+	//let currentVoidability = initialVoidability + changeinVoidability;
+	//} else {
+	//let currentVoidability = priorVoidability + changeinVoidability;
+	//}
+//}
+
+//function decreaseVoidability(){
+	//if currentVoidability = 0 {
+	//const changeinVoidability = 0;
+	//} else {
+	//const changeinVoidability = -2;
+	//let currentVoidability = priorVoidability + changeinVoidability;
+	//}
+//}
 	
 
 //Save Game
@@ -86,3 +102,37 @@ function loadGame() {
     document.getElementById("loadgame").innerHTML = "load";
   }
 }
+
+
+//Deck Builder
+function deckBuilder() {
+	const values = [ "A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K",];
+	const suits = ["Hearts", "Diamonds", "Spades", "Clubs"];
+	const cards = [];
+	for (let s = 0; s < suits.length; s++) {
+		for (let v = 0; v < values.length; v++) {
+			const value = values[v];
+			const suits = suits[s];
+			cards.push({value, suit});
+		}
+	}
+	return cards;
+}
+	
+function randomCard(cards) {
+	const random = Math.floor(Math.random() * 51);
+	const cardValue = cards[random].value;
+	const cardSuit = cards[random].suit;
+	let entity;
+	cardSuit === "Diamonds" 
+	? (entity = "&diams;") 
+	: (entity = "&" + cardSuit.toLowerCase() + ";");
+	const card = document.createElement("div");
+	card.classList.add("card", cardSuit.toLowerCase());
+	card.innerHTML = '<span class="card-value-suit-top">' + cardValue + entity + '</span>' + '<span class="card-suit">' + entity + '</span>' + '<span class="card-value-suit bot">' + cardValue + entity + '</span>';
+	document.body.appendChild(card);
+}
+
+const cards = deckBuilder();
+randomCard(cards);
+			

@@ -1,13 +1,23 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<link rel="stylesheet" href="Characters.css">
+	<link rel="stylesheet" href="Character Selection.css">
 	<link rel="icon" href="thevoidicon.ico">
 </head>
 
 <body>
 
-<script src="The Void.js"></script>
+<script>
+function openNav() {
+  document.getElementById("navsidebar").style.width = "250px";
+  document.getElementById("main").style.marginLeft = "250px";
+}
+
+function closeNav() {
+  document.getElementById("navsidebar").style.width = "0";
+  document.getElementById("main").style.marginLeft= "0";
+}
+</script>
 
 
 <!--Sidebar-->
@@ -24,75 +34,46 @@
 </div>
 
 <div class="fadein">
-<h1>Character Information</h1>
+<h1>Select a character to continue</h1>
 <br>
 <div class="row">
 	<div class="column">
-		<div class="charactercard">
+		<a href="J.Chapter 2.html">
 		<img src="jaz.png" style="width:100%">
 		<div class="charactername">
 		<div class="glow"> Jaz </div>
 		</div>
-		<div class="characterinfo">
-		<br>
-		<b>Age:</b> 23
-		<br>
-		<br>
-		<b>Skills:</b> physical combat, negotiation & persuasion, sleight of hand
-		<br>
-		<br>
-		<b>Vices:</b> gambling
-		</div>
-		</div>
+		</a>
 	</div>
 	<div class="column">
-		<div class="charactercard">
+		<a href="E.Chapter 2.html">
 		<img src="ezri.png" style="width:100%">
 		<div class="charactername"> 
 		<div class="glow"> Ezri </div>
 		</div>
-		<div class="characterinfo">
-		<br>
-		<b>Age:</b> 25
-		<br>
-		<br>
-		<b>Skills:</b> physical combat, persuasion, strategic thinking
-		<br>
-		<br>
-		<b>Vices:</b> smoking, drinking
-		</div>
-		</div>
+		</a>
 	</div>
 	<div class="column">
-		<div class="charactercard">
+		<a href="N.Chapter 2.html">
 		<img src="nex.png" style="width:100%">
 		<div class="charactername"> 
 		<div class="glow"> Nex </div>
 		</div>
-		<div class="characterinfo">
-		<br>
-		<b>Age:</b> 25
-		<br>
-		<br>
-		<b>Skills:</b> physical combat, tracking, information gathering
-		<br>
-		<br>
-		<b>Vices:</b> smoking
-		</div>
-		</div>
+		</a>
 	</div>
 </div>
 </div>
 
 <br>
+<br>
 
 <!--Bottom Navigation Bar-->
 <div class="bottomnavbar">
-  <a href="The Void.html">Play</a>
+  <a class="active" href="The Void.html">Play</a>
   <a id="savegame" onclick="saveGame()">Save</a>
   <a id="loadgame" onclick="loadGame()">Load</a>
   <a href="#">Stats</a>
-  <a class="active" href="Characters.html">Characters</a>
+  <a href="Characters.html">Characters</a>
 </div>
 
 
